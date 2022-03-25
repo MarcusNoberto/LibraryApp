@@ -72,6 +72,9 @@ class admin(TemplateView):
 class publisher(TemplateView):
 	template_name = 'publisher/publisher_home.html'
 
+def uabook_form(request):
+	return render(request, 'publisher/add_book.html')
+
 class BookList(ListView):
 	model = models.Book
 	template_name = 'publisher/book_list.html'

@@ -23,4 +23,5 @@ urlpatterns = [
 
     #publisher urls
     path('booklist/', views.BookList.as_view(), name = 'publisher'),
+    path('uabook_form/', views.uabook_form, name='uabook_form'),
 ]
