@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.db.models import Sum
 from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView, TemplateView
 from . import models
+from .forms import ChatForm
 import operator
 import itertools
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -83,6 +84,71 @@ class BookList(ListView):
 
 	def get_queryset(self):
 		return models.Book.objects.order_by('-id')
+
+@login_required
+def uabook(request):
+	if request.method == 'POST':
+		title = request.POST['title']
+		author = request.POST['author']
+		year = request.POST['year']
+		publisher = request.POST['publisher']
+		desc = request.POST['desc']
+		cover = request.POST.get('cover', False)
+		pdf = request.POST.get('pdf', False)
+		current_user = request.user
+		user_id = current_user.id
+		username = current_user.username
+
+		a = models.Book(title=title, author=author, year=year, publisher=publisher,
+			desc=desc, cover=cover, pdf=pdf, uploaded_by=username, user_id=user_id)
+		a.save()
+		messages.success(request, 'Book was uploaded successfully')
+		return redirect('publisher')
+	else:
+		messages.error(request, 'Book was not uploaded successfully')
+		return redirect('uabook_form')
+
+class UserCreateChat(LoginRequiredMixin, CreateView):
+	form_class = ChatForm
+	model = models.Chat
+	template_name = 'publisher/chat_form.html'
+	success_url = reverse_lazy('ulchat')
+
+	def form_valid(self, form):
+		self.object = form.save(commit=False)
+		self.object.user = self.request.user
+		self.object.save()
+		return super().form_valid(form)
+
+class UserListChat(LoginRequiredMixin, ListView):
+	model = models.Chat
+	template_name = 'publisher/chat_list.html'
+
+	def get_queryset(self):
+		return models.Chat.objects.filter(posted_at__lt=timezone.now()).order_by('posted_at')
+
+@login_required
+def request_form(request):
+	return render(request, 'publisher/delete_request.html')
+
+@login_required
+def delete_request(request):
+	if request.method == 'POST':
+		book_id = request.POST['delete_request']
+		current_user = request.user
+		user_id = current_user.id
+		username = current_user.username
+		user_request = username + "  want book with id  " + book_id + " to be deleted"
+
+		a = models.DeleteRequest(delete_request=user_request)
+		a.save()
+		messages.success(request, 'Request was sent')
+		return redirect('publisher')
+	else:
+		messages.error(request, 'Request was not sent')
+		return redirect('request_form')
+
+
 
 
 
