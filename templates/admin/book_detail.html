@@ -1,7 +1,5 @@
-{% extends 'librarian/base.html' %}
-
-
-
+{% extends 'dashboard/base.html' %}
+{% load static %}
 
 {% block body %}
 <div class="container-fluid">
@@ -12,7 +10,7 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">Book Title : {{ object.title }} </a>
+                    <a href="">book Title : {{ object.title }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
@@ -26,20 +24,22 @@
                         </div>
                     {% endfor %}
 
-    <div class="row">
+ <div class="row">
         <div class="col-12">
-            <form method="post">
-                {% csrf_token %}
-                <div class="alert alert-warning" role="alert">
-                  Are you sure to delete detail of book {{ object }} ?
-                </div>
-                <input type="submit" class="btn btn-danger" value="Yes, delete it" />
-                <a class="btn btn-success" href="{% url 'librarian' %}">No, just I've clicked at the wrong place</a>
-            </form>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Book Title:</strong> {{ object.task_title }}</li>
+              <li class="list-group-item"><strong>Author :</strong> {{ object.author }}</li>
+              <li class="list-group-item"><strong>Description:</strong> {{ object.desc }}</li>
+              <li class="list-group-item"><strong>Uploded By :</strong> {{ object.uploaded_by }}</li>
+            </ul>
         </div>
     </div>
 
-                  
+    <div class="row top-buffer" style="padding-top: 10px">
+        <div class="col-12">
+                <a href="{% url 'ambook' %}"><button type="button" class="btn btn-success">Back</button></a>
+        </div>
+    </div>
 
 
           </div>

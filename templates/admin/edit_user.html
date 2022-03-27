@@ -1,7 +1,5 @@
-{% extends 'librarian/base.html' %}
-
-
-
+{% extends 'dashboard/base.html' %}
+{% load static %}
 
 {% block body %}
 <div class="container-fluid">
@@ -12,7 +10,7 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">Book Title : {{ object.title }} </a>
+                    <a href="">User : {{ object.username }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
@@ -28,18 +26,19 @@
 
     <div class="row">
         <div class="col-12">
-            <form method="post">
+            <form method="post" style="background-color: black">
                 {% csrf_token %}
-                <div class="alert alert-warning" role="alert">
-                  Are you sure to delete detail of book {{ object }} ?
-                </div>
-                <input type="submit" class="btn btn-danger" value="Yes, delete it" />
-                <a class="btn btn-success" href="{% url 'librarian' %}">No, just I've clicked at the wrong place</a>
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <input type="submit" {% if request.path == '/new' %} value="Add" {% else %} value="Update" {% endif %} class="btn btn-success"/>
+                <a href="{% url 'aluser' %}"><button type="button" class="btn btn-secondary">Back</button></a>
             </form>
         </div>
     </div>
-
-                  
 
 
           </div>
