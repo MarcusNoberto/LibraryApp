@@ -49,16 +49,16 @@
         <a class="nav-link" href=" {% url 'request_form' %}">Delete Request</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Send Feedback</a>
+        <a class="nav-link" href="{% url 'feedback_form' %}">Send Feedback</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">About Us</a>
+        <a class="nav-link" href="{% url 'about' %}">About Us</a>
       </li>
     </ul>
   </div>
 
     <!-- Navbar Search -->
-<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="">
+<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action=" {% url 'usearch' %}">
         <div class="input-group">
             <input type="text" class="form-control" name="query" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
