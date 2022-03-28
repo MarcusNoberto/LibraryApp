@@ -51,7 +51,7 @@ def registerView(request):
 		return redirect('regform')
 
 
-def loginview(request):
+def loginView(request):
 
 	if request.method == 'POST':
 		username = request.POST['username']
@@ -71,7 +71,7 @@ def loginview(request):
 
 
 #Admin views
-class admin(TemplateView):
+class Admin(TemplateView):
 	template_name = 'admin/home.html'
 
 

@@ -29,7 +29,7 @@ urlpatterns = [
 
 
     #admin urls
-    path('dashboard/', views.dashboard, name='dashboard'),
+    path('dashboard/', views.admin, name='admin'),
     path('acchat/', views.ACreateChat.as_view(), name='acchat'),
     path('alchat/', views.AListChat.as_view(), name='alchat'),
     path('aabook_form/', views.aabook_form, name='aabook_form'),
