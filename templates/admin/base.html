@@ -53,7 +53,7 @@
 <!-- headers-->
 <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
 
-    <a class="navbar-brand mr-1 text-primary" href="">BookApp Dashboard</a>
+    <a class="navbar-brand mr-1 text-primary" href="">Biblioteca Gerenciamento</a>
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
     </button>
@@ -95,7 +95,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'admin' %}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Admin Dashboard</span>
+            <span>Bibioteca Gerenciamento</span>
         </a>
     </li>
     <li class="nav-item active">
@@ -113,38 +113,38 @@
         <li class="nav-item">
         <a class="nav-link" href="{% url 'aabook_form' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Add Book</span>
+            <span style="color: white">Adicionar livro</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{% url 'albook' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Recent Added Books</span>
+            <span style="color: white">Livros recentemente adicionados</span>
         </a>
     </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{% url 'ambook' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Manage Books</span>
+            <span style="color: white"> Gerenciar livros</span>
         </a>
     </li>
      <li class="nav-item">
         <a class="nav-link" href="{% url 'adrequest' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Delete Request</span>
+            <span style="color: white">Deletar pedidos</span>
         </a>
     </li>
      <li class="nav-item">
         <a class="nav-link" href="{% url 'afeedback' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">User Feedback</span>
+            <span style="color: white">Feedback</span>
         </a>
     </li>
      <li class="nav-item">
         <a class="nav-link" href="{% url 'aluser' %}">
             <i class="fas fa-user text-primary"></i>
-            <span style="color: white">Manage User</span>
+            <span style="color: white">Gerenciar usuários</span>
         </a>
     </li>
 </ul>    
@@ -167,14 +167,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Preparado pra sair</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">Selecione logout se você quer encerrar sua sessão</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
             </div>
         </div>

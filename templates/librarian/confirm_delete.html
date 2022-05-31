@@ -12,12 +12,12 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">Book Title : {{ object.title }} </a>
+                    <a href="">Titulo do livro : {{ object.title }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-warning"></i>
-                    Details Of Book
+                    Detalhes do livro
                 </div>
                 <div class="card-body">
                     {% for message in messages %}
@@ -31,10 +31,10 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="alert alert-warning" role="alert">
-                  Are you sure to delete detail of book {{ object }} ?
+                  Você tem certeza que você deseja deletar: {{ object }} ?
                 </div>
-                <input type="submit" class="btn btn-danger" value="Yes, delete it" />
-                <a class="btn btn-success" href="{% url 'lmbook' %}">No, just I've  clicked at the wrong place</a>
+                <input type="submit" class="btn btn-danger" value="Sim, deletar" />
+                <a class="btn btn-success" href="{% url 'lmbook' %}">Não, voltar para a pagina anterior</a>
             </form>
         </div>
     </div>

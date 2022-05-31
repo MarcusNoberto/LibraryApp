@@ -7,12 +7,11 @@
     <div id="content-wrapper">
 
         <div class="container-fluid">
-            <!-- Breadcrumbs-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="#">CRUD</a>
                 </li>
-                <li class="breadcrumb-item active">Add</li>
+                <li class="breadcrumb-item active">Adicionar</li>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
@@ -27,13 +26,13 @@
                             <div class="col-md-6">
                                 <div class="form-label-group">
                                     <input type="text" class="form-control" name="first_name" placeholder="First Name" id="inputFirst" required="">
-                                    <label for="inputFirst">First Name</label>
+                                    <label for="inputFirst">Nome</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-label-group">
                                     <input type="text" class="form-control" name="last_name" placeholder="Last Name" id="inputLast" required="">
-                                    <label for="inputLast">Last Name</label>
+                                    <label for="inputLast">Sobrenome</label>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +58,7 @@
                             <div class="col-md-6">
                                <div class="form-label-group">
                                     <input type="text" class="form-control" name="password" placeholder="Password" id="inputdescription" required="">
-                                    <label for="inputdescription">Password</label>
+                                    <label for="inputdescription">Senha</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -67,9 +66,9 @@
                                            <select class="w3-select w3-border" name="userType">
   <option value="{{ choice.2 }}">Choose User Role</option>
  
-<option value="{{ choice.2 }}"> Publisher</option>
-  <option value="{{ choice.3 }}"> Admin</option>
-  <option value="{{ choice.4 }}"> Librarian</option>
+<option value="{{ choice.2 }}"> Escritor</option>
+  <option value="{{ choice.3 }}"> Administrador</option>
+  <option value="{{ choice.4 }}"> Bibliotecário</option>
 
 </select>
                                 </div>

@@ -14,7 +14,7 @@
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-primary"></i>
-                    Manage Books
+                    Gerenciar livros
                 </div>
                 <div class="card-body">
 
@@ -31,12 +31,12 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>Book ID</th>
-                                <th>Book Cover</th>
-                                <th>Book Title</th>
-                                <th>View</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>ID Livro</th>
+                                <th>Capa do livro</th>
+                                <th>Titulo do livro</th>
+                                <th>Ver</th>
+                                <th>Editar</th>
+                                <th>Deletar</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -59,13 +59,13 @@
                                   
                                   <td>{{ book.title }}</td>
                                   <td>
-                <a href="{% url 'lvbook' book.pk %}"><button type="button" class="btn btn-primary"> View</button></a>
+                <a href="{% url 'lvbook' book.pk %}"><button type="button" class="btn btn-primary"> Ver</button></a>
                  </td>
                 <td>
-                <a href="{% url 'lebook' book.pk %}"><button type="button" class="btn btn-warning"> Edit</button></a>
+                <a href="{% url 'lebook' book.pk %}"><button type="button" class="btn btn-warning"> Editar</button></a>
         </td>
         <td>
-          <a href="{% url 'ldbookk' book.pk %}"><button type="button" class="btn btn-danger"> Delete</button></a></td>
+          <a href="{% url 'ldbookk' book.pk %}"><button type="button" class="btn btn-danger"> Deletar</button></a></td>
                                   
                                 </tr>
 

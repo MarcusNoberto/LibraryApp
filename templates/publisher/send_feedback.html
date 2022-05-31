@@ -16,7 +16,7 @@
     <div class="card">
   <div class="card-header">
           <i class="fas fa-table text-primary"></i>
-    Send Us Your Feedback About Our Service
+    Envie um feedback
   </div>
 </div>
 
@@ -29,10 +29,10 @@
 	<div class="form-group">
     <form action="{% url 'send_feedback' %}" method="POST">
     {% csrf_token %}
-  <label for="comment">Type Below Your Feedback</label>
+  <label for="comment">Escreva abaixo o feedback</label>
   <textarea class="form-control" rows="5" id="comment" name="feedback"></textarea>
   <br>
-  <a href=""><button type="submit" class="btn btn-primary"> Send</button></a>
+  <a href=""><button type="submit" class="btn btn-primary">Enviar</button></a>
 </form>
 
 <br>

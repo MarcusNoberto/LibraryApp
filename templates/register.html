@@ -1,8 +1,6 @@
 {% load static %}
 
-<video loop muted autoplay playsinline class="video">
-  <source src="{% static 'css/back.mp4' %}" type="video/mp4" />
-</video>
+
 <!-- Custom styles for this template-->
     <link href="{% static 'bookapp/css/login.css' %}" rel="stylesheet">
     <link href="{% static 'bookstore/css/bootstrap/bootstrap.min.js' %}" rel="stylesheet">
@@ -15,14 +13,14 @@
 <head>
 	<title>Dashboard</title>
 </head>
-<!--Coded with love by Mutiullah Samim-->
+
 <body> 
 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -33,14 +31,14 @@
 <br> 
 
 
-		 <h1 style="color: white" class="text-md-center"><span class="g"></span><span class="o"></span><span class="o1">BookApp</span> <span class="g"></span><span class="l"></span><span class="e"></span></h1>
+		 <h1 style="color: white" class="text-md-center"><span class="g"></span><span class="o"></span><span class="o1">Biblioteca</span> <span class="g"></span><span class="l"></span><span class="e"></span></h1>
 
 <div class="row">
 	<aside class="col-sm-4">
 	</aside> <!-- col.// -->
 
 	<aside class="col-sm-4">
-		<h1 style="color: yellow; font-weight: bold; font-size: 40px" class="text-md-center"><span class="g"></span><span class="o"></span><span class="o1"></span>BookApp<span class="g"></span><span class="l"></span><span class="e"></span></h1>
+		<h1 style="color: yellow; font-weight: bold; font-size: 40px" class="text-md-center"><span class="g"></span><span class="o"></span><span class="o1"></span>Online<span class="g"></span><span class="l"></span><span class="e"></span></h1>
 		<br>
 <div class="card">
 <article class="card-body" style="padding-top: 0px">
@@ -94,7 +92,7 @@
             <div class="messages">
                 {% for message in messages %}
 
-                    <a class="alert alert-success" style="color:red;"> {{ message }}</a>
+                    <a class="alert alert-success" style="color:red; font-size: small"> {{ message }}</a>
 
                 {% endfor %}
             </div>

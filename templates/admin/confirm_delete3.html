@@ -16,7 +16,7 @@
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-warning"></i>
-                    Details Of User
+                    Detalhes do usuário
                 </div>
                 <div class="card-body">
                     {% for message in messages %}
@@ -30,10 +30,10 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="alert alert-warning" role="alert">
-                  Are you sure to delete detail of {{ object }} ?
+                  Você tem certeza que quer deletar o : {{ object }} ?
                 </div>
-                <input type="submit" class="btn btn-danger" value="Yes, delete it" />
-                <a class="btn btn-success" href="{% url 'aluser' %}">No, just I've tried the delete button</a>
+                <input type="submit" class="btn btn-danger" value="Sim, deletar" />
+                <a class="btn btn-success" href="{% url 'aluser' %}">Não, voltar para a pagina anterior</a>
             </form>
         </div>
     </div>

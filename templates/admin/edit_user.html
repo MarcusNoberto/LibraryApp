@@ -34,8 +34,8 @@
                         {{ field }}
                     </div>
                 {% endfor %}
-                <input type="submit" {% if request.path == '/new' %} value="Add" {% else %} value="Update" {% endif %} class="btn btn-success"/>
-                <a href="{% url 'aluser' %}"><button type="button" class="btn btn-secondary">Back</button></a>
+                <input type="submit" {% if request.path == '/new' %} value="Add" {% else %} value="Atualizar" {% endif %} class="btn btn-success"/>
+                <a href="{% url 'aluser' %}"><button type="button" class="btn btn-secondary">Voltar</button></a>
             </form>
         </div>
     </div>

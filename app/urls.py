@@ -1,6 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from django.contrib.auth import views as auth_views
+
+
 
 urlpatterns = [
     path('', views.login_form, name = 'home'),
@@ -64,8 +65,7 @@ urlpatterns = [
     path('send_feedback/', views.send_feedback, name='send_feedback'),
     path('about/', views.about, name='about'),
     path('usearch/', views.usearch, name='usearch'),
+
 ]
 
-from django.conf import settings
-from django.conf.urls.static import static
 

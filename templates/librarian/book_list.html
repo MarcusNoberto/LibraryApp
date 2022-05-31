@@ -16,7 +16,7 @@
                 <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-primary"></i>
-                    Recent Added Books
+                    Livros recentemente adicionados
                 </div>
                 <div class="card-body">
 
@@ -36,10 +36,10 @@
                          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>Book ID</th>
-                                <th>Book Cover</th>
-                                <th>Book Title</th>
-                                <th>Read</th>
+                                <th>ID livro</th>
+                                <th>Capa do livro</th>
+                                <th>Titulo do livro</th>
+                                <th>Ler</th>
                                 <th>Download</th>
                             </tr>
                             </thead>
@@ -66,7 +66,7 @@
                                     <td>
                                     {% if book.pdf %}
                                       <a href="{{ book.pdf.url }}" class="btn btn-outline-primary" target="_blank">
-                                    View PDF</a>
+                                    Ver PDF</a>
                                     {% else %}
                                     <span class="text-muted">No PDF</span>
                                    {% endif %}

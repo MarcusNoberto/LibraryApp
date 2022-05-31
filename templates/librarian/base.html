@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     {% block title %}{% endblock %}
-    <title>PIMS</title>
+    <title>Biblioteca Online</title>
 
 
     {% block stylesheets %}
@@ -53,7 +53,7 @@
 <!-- headers-->
 <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
 
-    <a class="navbar-brand mr-1 text-primary" href="">BookApp Dashboard</a>
+    <a class="navbar-brand mr-1 text-primary" href="">Biblioteca Gerenciamento</a>
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
     </button>
@@ -61,7 +61,7 @@
     <!-- Navbar Search -->
       <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{% url 'lsearch' %}">
         <div class="input-group">
-            <input type="text" class="form-control" name="query" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" name="query" placeholder="Pesquisar por..." aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-search"></i>
@@ -95,7 +95,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'librarian' %}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Librarian Dashboard</span>
+            <span>Biblioteca Gerenciamento</span>
         </a>
     </li>
     <li class="nav-item active">
@@ -113,26 +113,26 @@
         <li class="nav-item">
         <a class="nav-link" href="{% url 'labook_form' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Add Book</span>
+            <span style="color: white">Adicionar livro</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{% url 'llbook' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Recent Added Books</span>
+            <span style="color: white">Livros recentemente adicionados</span>
         </a>
     </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{% url 'lmbook' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Manage Books</span>
+            <span style="color: white">Gerenciar livros</span>
         </a>
     </li>
      <li class="nav-item">
         <a class="nav-link" href="{% url 'ldrequest' %}">
             <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Delete Request</span>
+            <span style="color: white">Deletar Pedidos</span>
         </a>
     </li>
 </ul>    
@@ -155,14 +155,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Preparado pra sair?</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">Selecione logout se você quer encerrar sua sessão</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                <a class="btn btn-primary" href="/logout">Logout</a>
             </div>
         </div>

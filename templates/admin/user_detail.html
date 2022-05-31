@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">User : {{ object.username }} </a>
+                    <a href="">Usuário : {{ object.username }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-warning"></i>
-                    Details Of User
+                    Detalhes do usuário
                 </div>
                 <div class="card-body">
                     {% for message in messages %}
@@ -37,7 +37,7 @@
 
     <div class="row top-buffer" style="padding-top: 10px">
         <div class="col-12">
-                <a href="{% url 'aluser' %}"><button type="button" class="btn btn-success">Back</button></a>
+                <a href="{% url 'aluser' %}"><button type="button" class="btn btn-success">Voltar</button></a>
         </div>
     </div>
 

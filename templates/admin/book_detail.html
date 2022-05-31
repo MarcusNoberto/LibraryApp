@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">book Title : {{ object.title }} </a>
+                    <a href="">Titulo do livro : {{ object.title }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-warning"></i>
-                    Details Of Book
+                    Detalhes do livro
                 </div>
                 <div class="card-body">
                     {% for message in messages %}
@@ -27,9 +27,9 @@
  <div class="row">
         <div class="col-12">
             <ul class="list-group">
-              <li class="list-group-item"><strong>Book Title:</strong> {{ object.task_title }}</li>
-              <li class="list-group-item"><strong>Author :</strong> {{ object.author }}</li>
-              <li class="list-group-item"><strong>Description:</strong> {{ object.desc }}</li>
+              <li class="list-group-item"><strong>Titulo do livro:</strong> {{ object.task_title }}</li>
+              <li class="list-group-item"><strong>Autor :</strong> {{ object.author }}</li>
+              <li class="list-group-item"><strong>Descrição:</strong> {{ object.desc }}</li>
               <li class="list-group-item"><strong>Uploded By :</strong> {{ object.uploaded_by }}</li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
 
     <div class="row top-buffer" style="padding-top: 10px">
         <div class="col-12">
-                <a href="{% url 'ambook' %}"><button type="button" class="btn btn-success">Back</button></a>
+                <a href="{% url 'ambook' %}"><button type="button" class="btn btn-success">Voltar</button></a>
         </div>
     </div>
 

@@ -25,7 +25,7 @@
 <div class="row">
     <div class="col-sm-8">
     <a href="/llchat"><button class="btn btn btn-primary"><i class="fa fa-refresh" aria-hidden="true"></i>
-    Rerfresh For Any New Chats</button></a><br><br><br>
+    Atualize para ver novas mensagens</button></a><br><br><br>
 
     {% for chat in object_list %}
 
@@ -48,10 +48,10 @@
         </div><br><br><br>
 
     {% empty %}
-    <h1 class="heading">No Chats Yet Be The First To Message!</h1><br>
+    <h1 class="heading">Sem conversas. Seja o primeiro a enviar uma mensagem</h1><br>
 
     {% endfor %}
-    <br><a href="{% url 'lcchat' %}"><button class="btn btn-outline-primary">New Message</button></a>
+    <br><a href="{% url 'lcchat' %}"><button class="btn btn-outline-primary">Nova Mensagem</button></a>
 
     <div class="col-sm-4"></div>
     </div>

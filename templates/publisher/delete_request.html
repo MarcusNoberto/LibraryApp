@@ -18,9 +18,9 @@
           <i class="fas fa-table text-primary"></i>
     Enter book ID To Delete
   </div>
-  <center><p class="">Note: Make sure the book you request to be deleted</br>
-  was uploaded by you. Unless otherwise, the book will</br>
-not be deleted</p></center>
+  <center><p class="">Atenção: Tenha certeza que o livro que você escolheu para deletar</br>
+  foi enviado por você. Caso contrário, o livro</br>
+não será removido</p></center>
 </div>
 
 
@@ -32,7 +32,7 @@ not be deleted</p></center>
 	<div class="form-group">
     <form action="{% url 'delete_request' %}" method="POST">
     {% csrf_token %}
-  <label for="comment">Type In Book ID that will be deleted</label>
+  <label for="comment">Escreva o id do livro que será deletado</label>
   <textarea class="form-control" rows="5" id="comment" name="delete_request"></textarea>
   <br>
   <input class="button" type="submit" value="Delete" />

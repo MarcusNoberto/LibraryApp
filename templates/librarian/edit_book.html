@@ -10,12 +10,12 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">Book Title : {{ object.title }} </a>
+                    <a href="">Titulo do livro : {{ object.title }} </a>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table text-warning"></i>
-                    Details Of Book
+                    Detalhes do Livro
                 </div>
                 <div class="card-body">
                     {% for message in messages %}
@@ -34,8 +34,8 @@
                         {{ field }}
                     </div>
                 {% endfor %}
-                <input type="submit" {% if request.path == '/new' %} value="Add" {% else %} value="Update" {% endif %} class="btn btn-success"/>
-                <a href="{% url 'lmbook' %}"><button type="button" class="btn btn-secondary">Back</button></a>
+                <input type="submit" {% if request.path == '/new' %} value="Adicionar" {% else %} value="Atualizar" {% endif %} class="btn btn-success"/>
+                <a href="{% url 'lmbook' %}"><button type="button" class="btn btn-secondary">Voltar</button></a>
             </form>
         </div>
     </div>

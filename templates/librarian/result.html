@@ -21,7 +21,7 @@
                         
                         <ol class="breadcrumb">
       <li class="breadcrumb-item">
-            <a href="#">BookApp Search Results</a>
+            <a href="#">Resultados da pesquisa</a>
       </li>
 </ol>
 
@@ -32,13 +32,13 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Book Cover</th>
-                                <th>Book Title</th>
-                                <th>Publisher</th>
-                                <th>Read</th>
+                                <th>ID Livro</th>
+                                <th>Capa do livro</th>
+                                <th>Titulo do livro</th>
+                                <th>Escritor</th>
+                                <th>Ler</th>
                                 <th>Download</th>
-                                <th>Delete</th>
+                                <th>Deletar</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,7 +53,7 @@
                                     {% if file.cover %}
                                     <img src="{{ file.cover.url }}" alt="{{ file.title }}" style="width:100px; height: 100px">
                                     {% else %}
-                                    <span class="text-muted">No cover</span>
+                                    <span class="text-muted">Sem Capa</span>
                                     {% endif %}
                                    </td>
 
@@ -67,7 +67,7 @@
                                       <a href="{{ file.pdf.url }}" class="btn btn-outline-primary" target="_blank">
                                     View PDF</a>
                                     {% else %}
-                                    <span class="text-muted">No PDF</span>
+                                    <span class="text-muted">Sem PDF</span>
                                    {% endif %}
                                   </td>
                                     <td>
@@ -75,12 +75,12 @@
                                       <a href="{{ file.pdf.url }}" download class="btn btn-outline-success">
                                     Download PDF</a>
                                     {% else %}
-                                   <span class="text-muted">No PDF</span>
+                                   <span class="text-muted">Sem PDF</span>
                                    {% endif %}
                                   </td>
 
         <td>
-          <a href="{% url 'ldbook' file.pk %}"><button type="button" class="btn btn-danger"> Delete</button></a></td>
+          <a href="{% url 'ldbook' file.pk %}"><button type="button" class="btn btn-danger"> Deletar</button></a></td>
                                   
                                 </tr>
 
@@ -93,7 +93,7 @@
                         {%else%}
 
 
-<center><h3 style="text-align:center; color:yellow; background: green; width: 600px" id="answer">No Search Found</h3></center>
+<center><h3 style="text-align:center; color:yellow; background: green; width: 600px" id="answer"> Sem resultados da busca</h3></center>
 
                 <style type="text/css">
                   #search_result {

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'bootstrap4',
     'django_forms_bootstrap',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

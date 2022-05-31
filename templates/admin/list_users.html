@@ -11,14 +11,14 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="">Staff Members</a>
+                    <a href="">Membros da equipe</a>
                 </li>
                 <li class="breadcrumb-item active"></li>
             </ol>
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table"></i>
-                    List Of Users
+                    Lista de usuários
                     <a  class="btn btn-sm btn-success" href="{% url 'create_user_form' %}" style="padding: 8px; float: right; background-color: green; color: white;">Add User</a>
                 </div>
                 <div class="card-body">
@@ -33,11 +33,11 @@
                             <tr>
                                 <th>No</th>
                                 <th>Username</th>
-                                <th>User Role</th>
+                                <th>Função</th>
                                 <th>Email</th>
-                                <th>View</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Ver</th>
+                                <th>Editar</th>
+                                <th>Deletar</th>
 
                             </tr>
                             </thead>
@@ -58,13 +58,13 @@
                                     </td>
                                     <td>{{ user.email }}</td>
                                     <td>
-                <a href="{% url 'alvuser' user.pk %}"><button type="button" class="btn btn-primary"> View</button></a>
+                <a href="{% url 'alvuser' user.pk %}"><button type="button" class="btn btn-primary"> Ver</button></a>
                  </td>
                 <td>
-                <a href="{% url 'aeuser' user.pk %}"><button type="button" class="btn btn-warning"> Edit</button></a>
+                <a href="{% url 'aeuser' user.pk %}"><button type="button" class="btn btn-warning"> Editar</button></a>
         </td>
         <td>
-          <a href="{% url 'aduser' user.pk %}"><button type="button" class="btn btn-danger"> Delete</button></a></td>
+          <a href="{% url 'aduser' user.pk %}"><button type="button" class="btn btn-danger"> Deletar</button></a></td>
                                 </tr>
                             {% endfor %}
                         {% endif %}
